@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<nav class="navbar bg-body-tertiary fixed-top">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Black Cosmos</a>
+		  <ul class="nav nav-underline">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Login</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="http://localhost:5000/register">Register</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Abous us</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link disabled">Store</a>
+			</li>
+		  </ul>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas-header">
+			  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Black Cosmos</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+			  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">About us</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Join
+				  </a>
+				  <ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Register</a></li>
+					<li>
+					  <hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="#">Login</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			  <form class="d-flex mt-3" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+
+
+	  <div class="container">
+		<form method="POST" action="{{ url_for('login') }}">
+
+		  <h2>Login</h2>
+		  <div class="form-control">
+		  <div class="form-control">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+			<div class="error-message">Wrong password or email</div>
+		  </div>
+		  <div class="form-control">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			<div class="error-message">Wrong password or email</div>
+		  </div>
+		  <div class="form-control">
+			<input type="checkbox" id="terms" name="terms">
+            <hr>
+			<label for="terms">Remember me</label>
+
+		  </div>
+		  <button class="register-btn">Login</button>
+		</form>
+	  </div>	
+	
+</body>
+</html>

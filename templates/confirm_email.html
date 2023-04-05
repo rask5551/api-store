@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/confirm_email.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  <title>Verify your email</title>
+</head>
+<body>
+
+  <nav class="navbar bg-body-tertiary fixed-top">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Black Cosmos</a>
+		  <ul class="nav nav-underline">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="http://localhost:5000/login">Login</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="http://localhost:5000/register">Register</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Abous us</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link disabled">Store</a>
+			</li>
+		  </ul>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas-header">
+			  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Black Cosmos</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+			  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">About us</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Join
+				  </a>
+				  <ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Register</a></li>
+					<li>
+					  <hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="#">Login</a></li>
+				  </ul>
+				</li>
+			  </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        </div>
+      </div>
+      </nav>
+	  
+		  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<form class="form" method="POST">
+	<h2 class="heading">Verification</h2>
+	<div class="input-container">
+	  <label for="verification_code">Enter Verification Code:</label>
+	  <input class="verification-code" name="verification_code" type="password" maxlength="4" id="verification_code">
+	</div>
+	<div class="button-container">
+	  <button class="btn-submit" type="submit">Submit</button>
+	  <button class="btn-back">Back</button>
+	</div>
+	{% if error_message %}
+	  <p class="error-message">{{ error_message }}</p>
+	{% endif %}
+</form>
+
+<div class="container">
+	<footer class="py-5">
+		<div class="row">
+		  <div class="col-6 col-md-2 mb-3">
+			<h5>Section</h5>
+			<ul class="nav flex-column">
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+			</ul>
+		  </div>
+	
+		  <div class="col-6 col-md-2 mb-3">
+			<h5>Section</h5>
+			<ul class="nav flex-column">
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+			</ul>
+		  </div>
+	
+		  <div class="col-6 col-md-2 mb-3">
+			<h5>Section</h5>
+			<ul class="nav flex-column">
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+			  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+			</ul>
+		  </div>
+	
+		  <div class="col-md-5 offset-md-1 mb-3">
+			<form>
+			  <h5>Subscribe to our newsletter</h5>
+			  <p>Monthly digest of what's new and exciting from us.</p>
+			  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+				<label for="newsletter1" class="visually-hidden">Email address</label>
+				<input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+				<button class="btn btn-primary" type="button">Subscribe</button>
+			  </div>
+			</form>
+		  </div>
+		</div>
+		<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+		  <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+		  <ul class="list-unstyled d-flex">
+			<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+			<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+			<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+		  </ul>
+		</div>
+	  </footer>
+
+
+</form>
+
+
+</div>
+
+</body>
+</html>
